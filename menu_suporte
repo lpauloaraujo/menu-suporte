@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+#Código para o título
+largura_terminal=$(tput cols)
+titulo=" Menu de Suporte Técnico "
+esquerda=$(( (largura_terminal - ${#titulo}) / 2 ))
+direita=$(( largura_terminal - ${#titulo} - esquerda))
+esquerda_titulo=$(printf '%*s' "$esquerda" '' | tr ' ' '=')
+direita_titulo=$(printf '%*s' "$direita" '' | tr ' ' '=')
+echo "${esquerda_titulo}${titulo}${direita_titulo}"
+echo 'Criado por: Lucas Paulo de Araujo Silva'
+echo 
+
+#Código para as opções
+echo 'Digite o número da opção desejada e pressioner Enter'
+echo 
+echo 'Opções:'
+echo '1. Limpar cachê DNS'
+echo '2. Testar conexão com a internet'
+echo '3. Verificar endereços IP e configuração de rede'
+echo '4. Diagnosticar portas abertas'
+echo '5. Reiniciar interface de rede'
+
