@@ -9,15 +9,19 @@ esquerda_titulo=$(printf '%*s' "$esquerda" '' | tr ' ' '=')
 direita_titulo=$(printf '%*s' "$direita" '' | tr ' ' '=')
 echo "${esquerda_titulo}${titulo}${direita_titulo}"
 echo 'Criado por: Lucas Paulo de Araujo Silva'
-echo 
+echo
 
 #Código para as opções
-echo 'Digite o número da opção desejada e pressioner Enter'
-echo 
-echo 'Opções:'
-echo '1. Limpar cachê DNS'
-echo '2. Testar conexão com a internet'
-echo '3. Verificar endereços IP e configuração de rede'
-echo '4. Diagnosticar portas abertas'
-echo '5. Reiniciar interface de rede'
-
+opcao=""
+while [ "$opcao" != '0' ]
+do
+	echo 'Opções:'
+	echo '1. Limpar cachê DNS'
+	echo '2. Testar conexão com a internet'
+	echo '3. Verificar endereços IP e configuração de rede'
+	echo '4. Diagnosticar portas abertas'
+	echo '5. Reiniciar interface de rede'
+	echo
+	read -p 'Digite o número da opção desejada e pressioner Enter (0 para sair):' opcao
+done
+echo 'Menu de Suporte Técnico encerrado.'
