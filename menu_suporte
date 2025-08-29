@@ -13,7 +13,7 @@ echo
 
 #Código para as opções
 opcao=""
-while [ "$opcao" != '0' ]
+while true
 do
 	echo 'Opções:'
 	echo '1. Limpar cachê DNS'
@@ -23,5 +23,10 @@ do
 	echo '5. Reiniciar interface de rede'
 	echo
 	read -p 'Digite o número da opção desejada e pressioner Enter (0 para sair):' opcao
+	if [[ "$opcao" != '0'  ]]; then
+		echo "Funcionalidade"
+	else
+		break
+	fi
 done
 echo 'Menu de Suporte Técnico encerrado.'
